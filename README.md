@@ -3,165 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winzeem - Innovative Software Solutions</title>
+    <meta name="description" content="Professional portfolio showcasing my projects, skills, and experience in web development">
+    <meta name="keywords" content="portfolio, web developer, projects, skills">
+    <meta name="author" content="Your Name">
+    <title>Portfolio - Your Name</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bg-animation">
-        <div class="orb"></div>
-        <div class="orb"></div>
-        <div class="orb"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-
-    <nav id="navbar">
-        <div class="nav-content">
-            <div class="logo">🚀 WINZEEM</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#clients">Clients</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Portfolio</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="mobile-menu">☰</div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
         <div class="hero-content">
-            <h1>Welcome to WINZEEM</h1>
-            <p>Innovative Software Solutions for Tomorrow</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <h1 class="hero-title">
+                <span class="hero-greeting">Hello, I'm</span>
+                <span class="hero-name gradient-text">Your Name</span>
+            </h1>
+            <p class="hero-subtitle">Full Stack Developer & Creative Designer</p>
+            <p class="hero-description">
+                Crafting beautiful, functional, and user-centric digital experiences
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <section id="vision">
-        <h2 class="section-title">Our Vision & Mission</h2>
-        <div class="vm-container">
-            <div class="vm-card glass">
-                <h3>👁️ Vision</h3>
-                <p>To be the leading software company that transforms businesses through cutting-edge technology and innovative solutions, empowering organizations to achieve their full potential in the digital age.</p>
-            </div>
-            <div class="vm-card glass">
-                <h3>🎯 Mission</h3>
-                <p>To deliver exceptional software solutions that drive business growth, enhance operational efficiency, and create lasting value for our clients through expertise, innovation, and unwavering commitment to excellence.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card glass">
-                <div class="service-icon">💻</div>
-                <h3>Web Development</h3>
-                <p>Custom web applications tailored to your business needs</p>
-            </div>
-            <div class="service-card glass">
-                <div class="service-icon">📱</div>
-                <h3>Mobile Apps</h3>
-                <p>Native and cross-platform mobile solutions</p>
-            </div>
-            <div class="service-card glass">
-                <div class="service-icon">☁️</div>
-                <h3>Cloud Solutions</h3>
-                <p>Scalable cloud infrastructure and services</p>
-            </div>
-            <div class="service-card glass">
-                <div class="service-icon">🤖</div>
-                <h3>AI & ML</h3>
-                <p>Intelligent systems powered by artificial intelligence</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="clients">
-        <h2 class="section-title">Our Valued Clients</h2>
-        <p style="text-align: center; font-size: 20px; margin-bottom: 20px; opacity: 0.9;">Trusted by leading organizations worldwide</p>
-        <div class="clients-grid">
-            <div class="client-card glass">
-                <div class="client-logo">🏢</div>
-                <h3>TechCorp</h3>
-            </div>
-            <div class="client-card glass">
-                <div class="client-logo">🏦</div>
-                <h3>Global Finance</h3>
-            </div>
-            <div class="client-card glass">
-                <div class="client-logo">🏥</div>
-                <h3>HealthCare Plus</h3>
-            </div>
-            <div class="client-card glass">
-                <div class="client-logo">🛒</div>
-                <h3>E-Commerce Hub</h3>
-            </div>
-            <div class="client-card glass">
-                <div class="client-logo">🎓</div>
-                <h3>EduTech</h3>
-            </div>
-            <div class="client-card glass">
-                <div class="client-logo">🚗</div>
-                <h3>Auto Solutions</h3>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info glass">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div>
-                        <h3>Email</h3>
-                        <p>winzeem@gmail.com</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="profile.jpg" alt="Profile Picture" id="profileImage">
                     </div>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
-                    <div>
-                        <h3>Phone</h3>
-                        <p>+1 (555) 123-4567</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div>
-                        <h3>Location</h3>
-                        <p>123 Tech Street, Innovation City</p>
+                <div class="about-text">
+                    <h3 class="about-heading">Passionate Developer & Problem Solver</h3>
+                    <p class="about-paragraph">
+                        I'm a dedicated full-stack developer with a passion for creating elegant solutions 
+                        to complex problems. With expertise in modern web technologies, I bring ideas to 
+                        life through clean code and intuitive design.
+                    </p>
+                    <p class="about-paragraph">
+                        My journey in web development started with a curiosity about how things work on 
+                        the internet. Today, I specialize in building responsive, accessible, and 
+                        performant web applications that users love.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="contact-form glass">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">Technologies I work with to bring your ideas to life</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-name">Frontend Development</h3>
+                    <p class="skill-description">HTML, CSS, JavaScript, React, Vue.js</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3 class="skill-name">Backend Development</h3>
+                    <p class="skill-description">Node.js, Python, Express, Django</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3 class="skill-name">Database</h3>
+                    <p class="skill-description">MongoDB, PostgreSQL, MySQL, Firebase</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="skill-name">UI/UX Design</h3>
+                    <p class="skill-description">Figma, Adobe XD, Responsive Design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3 class="skill-name">DevOps</h3>
+                    <p class="skill-description">Git, Docker, AWS, CI/CD</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h3 class="skill-name">Mobile Development</h3>
+                    <p class="skill-description">React Native, Flutter, Progressive Web Apps</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Winzeem. All Rights Reserved.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A selection of my recent work</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project1.jpg" alt="E-Commerce Platform" id="project1Image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-featured e-commerce platform with shopping cart, payment integration, 
+                            and admin dashboard.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project2.jpg" alt="Task Management App" id="project2Image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            Collaborative task management tool with real-time updates and team features.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project3.jpg" alt="Weather Dashboard" id="project3Image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Weather Dashboard</h3>
+                        <p class="project-description">
+                            Beautiful weather dashboard with forecasts, maps, and location-based alerts.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">API</span>
+                            <span class="tag">Charts.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's work together on your next project</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🐙</div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-link" aria-label="GitHub">GH</a>
+                        <a href="#" class="social-link" aria-label="Dribbble">Dr</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-gradient"></div>
+        <div class="container">
+            <p class="footer-text">© 2025 Your Name. Crafted with passion and code.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
