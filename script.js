@@ -1,4 +1,35 @@
 // ===================================
+// MOBILE NAVIGATION TOGGLE
+// ===================================
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Toggle mobile menu
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Close menu when clicking on a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+});
+
+// ===================================
 // SMOOTH SCROLLING NAVIGATION
 // ===================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -22,13 +53,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -53,36 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const elementsToAnimate = document.querySelectorAll(
         '.skill-card, .project-card, .contact-item, .stat-item, .about-text, .about-image'
     );
-    
+
     elementsToAnimate.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
-    });
-});
-
-// ===================================
-// ACTIVE NAV LINK HIGHLIGHTING
-// ===================================
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
     });
 });
 
@@ -94,7 +99,7 @@ if (heroSubtitle) {
     const text = heroSubtitle.textContent;
     heroSubtitle.textContent = '';
     let i = 0;
-    
+
     function typeWriter() {
         if (i < text.length) {
             heroSubtitle.textContent += text.charAt(i);
@@ -102,7 +107,7 @@ if (heroSubtitle) {
             setTimeout(typeWriter, 100);
         }
     }
-    
+
     // Start typing after a short delay
     setTimeout(typeWriter, 1000);
 }
@@ -115,12 +120,12 @@ const orbs = document.querySelectorAll('.gradient-orb');
 window.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX / window.innerWidth;
     const mouseY = e.clientY / window.innerHeight;
-    
+
     orbs.forEach((orb, index) => {
         const speed = (index + 1) * 20;
         const x = (mouseX - 0.5) * speed;
         const y = (mouseY - 0.5) * speed;
-        
+
         orb.style.transform = `translate(${x}px, ${y}px)`;
     });
 });
@@ -135,16 +140,16 @@ projectCards.forEach(card => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateX = (y - centerY) / 10;
         const rotateY = (centerX - x) / 10;
-        
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
     });
@@ -163,7 +168,7 @@ skillCards.forEach(card => {
             }
         });
     });
-    
+
     card.addEventListener('mouseleave', () => {
         skillCards.forEach(otherCard => {
             otherCard.style.opacity = '1';
