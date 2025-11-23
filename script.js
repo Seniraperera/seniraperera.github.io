@@ -180,6 +180,12 @@ skillCards.forEach(card => {
 // LOADING ANIMATION
 // ===================================
 window.addEventListener('load', () => {
+    const loaderWrapper = document.getElementById('loaderWrapper');
+    if (loaderWrapper) {
+        setTimeout(() => {
+            loaderWrapper.classList.add('hidden');
+        }, 1500); // Hide after 1.5 seconds
+    }
     document.body.classList.add('loaded');
 });
 
